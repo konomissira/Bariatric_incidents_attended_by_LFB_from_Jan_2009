@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create an S3 bucket with versioning, encryption, and lifecycle rules
+
+Parameters:
+  BucketName:
+    Type: String
+    Default: "lfb-etl-bucket"
+    Description: Raw bucket for storing LFB Bariatric Incidents data.
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: "Bucket Configuration"
+        Parameters:
+          - BucketName
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: TransitionToGlacier
+            Status: Enabled
+            Transitions:
+              - TransitionInDays: 30
+                StorageClass: GLACIER
+            ExpirationInDays: 365
+      Tags:
+        - Key: Environment
+          Value: Development
+        - Key: Project
+          Value: LFB-Bariatric-Incidents
+
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Raw bucket for storing LFB Bariatric Incidents data.
