@@ -1,4 +1,3 @@
-updata_readme
 # Bariatric Incidents Attended by LFB from Jan 2009 to 2024
 
 ## Project Description:
