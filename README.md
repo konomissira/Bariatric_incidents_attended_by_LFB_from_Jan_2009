@@ -1,5 +1,5 @@
 updata_readme
-# Bariatric_incidents_attended_by_LFB_from_Jan_2009
+# Bariatric Incidents Attended by LFB from Jan 2009 to 2024
 
 ## Project Description:
 
@@ -48,5 +48,3 @@ The raw data was collected in Excel format and sampled for testing.
 Cleaned data was uploaded to an AWS S3 bucket.
 
 The Snowflake COPY INTO command was used to load the data into a Snowflake table.
-
-# Bariatric incidents attended by LFB from Jan 2009 to 2024
