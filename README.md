@@ -3,7 +3,7 @@ updata_readme
 
 ## Project Description:
 
-This project analyzes data on bariatric incidents attended by the London Fire Brigade (LFB). The goal is to process and load the data into a Snowflake powered data warehouse, enabling insightful analysis of the dataset, resource usage, and incident distributions. The project also explores visualization options and data science approaches to derive actionable insights.
+This project analyses data on bariatric incidents attended by the London Fire Brigade (LFB). The goal is to process and load the data into a Snowflake powered data warehouse, enabling insightful analysis of the dataset, resource usage, and incident distributions. The project also explores visualisation options and data science approaches to derive actionable insights.
 
 ## Tech Stack:
 
@@ -13,7 +13,7 @@ Cloud Storage: AWS S3
 
 Programming Languages: Python, SQL
 
-Tools: Grafana for visualization
+Tools: Grafana for visualisation
 
 Infrastructure as Code: AWS CloudFormation
 
@@ -39,7 +39,7 @@ The raw data was collected in Excel format and sampled for testing.
 
 -   Removed unnecessary fields.
 
--   Standardized field names and formats.
+-   Standardised field names and formats.
 
 -   Saved the cleaned data as a CSV file for further processing.
 
