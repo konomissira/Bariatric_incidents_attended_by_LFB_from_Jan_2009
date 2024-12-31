@@ -23,7 +23,7 @@ plt.xlabel("Borough")
 plt.ylabel("Number of Incidents")
 plt.show()
 
-# Analyze correlation between pump count and pump minutes
+# Analyse correlation between pump count and pump minutes
 correlation = data[['PumpCount', 'PumpMinutesRounded']].corr()
 print("Correlation Matrix:")
 print(correlation)
@@ -52,7 +52,7 @@ top_resource_usage = resource_usage.head(5)
 print("Top 5 Boroughs by Resource Usage:")
 print(top_resource_usage)
 
-# Visualize
+# Visualise
 top_resource_usage.plot(kind='pie', autopct='%1.1f%%', title="Resource Usage by Borough")
 plt.ylabel("")  # Hide y-label for a cleaner look
 plt.show()
